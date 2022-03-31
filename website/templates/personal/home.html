@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <header>
+    <div class="container">
+      <div class="logo"><img src="{% static 'images/logo.png' %}" alt=""></div>
+      <nav>
+        <ul>
+          <li><a class="inactive" href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="" class="active">Hire me</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="toggle">
+      <i class="material-icons" style="font-size:48px;color:red">menu</i>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="showcase"><br>
+        <div class="right">
+          <img src="{% static 'images/_DSC0131.JPG' %}" alt="">
+        </div>
+        <div class="left">
+          <h2>Hi, there</h2>
+          <h1>Ayikanying Allan</h1>
+          <h1 class="job"></h1><br>
+          <div class="description">
+            I design and develop services for customers of all sizes, specializing
+            in creating sytlish, modern websites, web services for online stores.
+          </div>
+          <div class="icon"> 
+            <i class="fa fa-github" style="font-size:30px;color:red;margin:10px 5px;"></i>
+            <i class="fa fa-linkedin" style="font-size:30px;color:red;margin:10px 5px;"></i>
+            <i class="fa fa-twitter" style="font-size:30px;color:red;margin:10px 5px;"></i>
+          </div><br>
+          <a href="">Hire me</a><br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="about" class="about-section">
+    <div class="container">
+      <div class="about">
+        <h1 class="title">About Me</h1>
+          <div class="me">
+            <img class="photo" src="{% static 'images/allan.jpg' %}" alt="">
+            <div class="center">
+              <p>
+                A man on a journey lorem ipsum dolar sign me in the group of the unknown people and do not cause for me any problem,
+                trying to be what I have always wnated to be but the life that am doing in has no direction at all.
+                The only way is to force that life that you wanted to become in future
+                A man on a journey lorem ipsum dolar sign me in the group of the unknown people and do not cause for me any problem,
+                trying to be what I have always wnated to be but the life that am doing in has no direction at all.
+                The only way is to force that life that you wanted to become in future
+              </p> 
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="services" class="service-section">
+    <div class="container">
+      <div class="services">
+        <h2>Servies I render for clients</h2>
+        <div class="offer">
+          <div class="offered-services">
+            <div class="alin">
+              <span><i class="material-icons" style="font-size:48px;color:#fff">storage</i></span>
+              <h2>Software Development</h2>
+            </div>
+            <p>Develop software to meet business standards</p>
+          </div>
+          <div class="offered-services">
+            <div class="alin">
+              <span><i class="material-icons" style="font-size:48px;color:#fff">desktop_windows</i></span>
+              <h2>Web Development</h2>
+            </div>
+            <p>Develop websites like e-commerce websites for both small and large enterprises</p>
+          </div>
+          <div class="offered-services">
+            <div class="alin">
+              <span><i class="material-icons" style="font-size:48px;color:#fff">dns</i></span>
+              <h2>Database Systems Development</h2>
+            </div>
+            <p>Develop database systems for companies in need of intergrating to databases</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="portfolio" class="portfolio">
+    <div class="container">
+      <h1>Projects</h1><br><hr><br>
+      <div class="projects">
+        <div class="developed">
+          <img class="size" src="{% static 'images/estate.png' %}" alt="">
+          <div class="overlay">
+            <p class="text"></p>
+          </div>
+        </div>
+        <div class="developed">
+          <img class="size" src="{% static 'images/port.png' %}" alt="">
+          <div class="overlay">
+            <p class="text"></p>
+          </div>
+        </div>
+        <div class="developed">
+          <img class="size" src="{% static 'images/portfolio.png' %}" alt="">
+          <div class="overlay">
+            <p class="text"></p>
+          </div>
+        </div>
+        <div class="developed">
+          <img class="size" src="{% static 'images/blog.png' %}" alt="">
+          <div class="overlay">
+            <p class="text"></p>
+          </div>
+        </div>
+        <div class="developed">
+          <img class="size" src="{% static 'images/social.png' %}" alt="">
+          <div class="overlay">
+            <p class="text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact" class="contact-section">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <div class="contact">
+        <div class="form-group">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <label for="fname">First Name</label><br>
+            <input type="text" name="fname" id="fname" placeholder="Enter your First Name"><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" name="lname" id="lname" placeholder="Enter your Last name"><br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" value="email" placeholder="Enter your email"><br>
+            <label for="message">Message</label><br>
+            <textarea placeholder="Write your message here..." name="message" id="message" cols="30" rows="10"></textarea><br>
+            <button type="submit">submit</button><br><br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="info">
+          <h2>Ayikanying Allan</h2>
+          <h2>Software <span>Developer</span></h2>
+          <div class="icon">
+            <span style="color:#fff;">stay connected</span> 
+            <i class="fa fa-github" style="font-size:25px;margin:10px 5px;color:red;"></i>
+            <i class="fa fa-linkedin" style="font-size:25px;margin:10px 5px;color:red;"></i>
+            <i class="fa fa-twitter" style="font-size:25px;margin:10px 5px;color:red;"></i>
+          </div>
+        </div>
+        <div class="contacts">
+          <h1>Contacts</h1>
+          <h2 id="email">allanayikanying72@gmail.com</h2>
+          <h2>0772952480</h2>
+        </div>
+        <div class="address">
+          <h1>Address</h1>
+          <h2>Kampala, Uganda</h2>
+          <h2>Banda <span>Zone B11</span></h2>
+        </div>
+      </div>
+      <div class="symbol">
+        <div class="container">
+          <p>Copyright &copy; 2022 Ayikanying Allan</p>
+        </div>
+      </div><br>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    var typed = new Typed(".job", {
+      strings:["Software Developer", "Web Developer", "Fullstack Developer", "Django Developer"],
+      typeSpeed: 120,
+      backSpeed: 110,
+      loop: true
+    })
+
+    $(document).ready(function(){
+            $('.toggle').click(function(){
+               $('nav').toggleClass('inactive') 
+            })
+        })
+  </script>
+{% endblock %}
